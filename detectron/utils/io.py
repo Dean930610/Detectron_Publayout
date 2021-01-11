@@ -33,7 +33,7 @@ from uuid import uuid4
 
 logger = logging.getLogger(__name__)
 
-_DETECTRON_S3_BASE_URL = 'https://drive.google.com/file/d/1uIdxMuoYbJ0HLoQIo3c36EyPme3cdhXs/'
+_DETECTRON_S3_BASE_URL = 'https://publayout.s3.us-east-2.amazonaws.com'
 
 
 def save_object(obj, file_name, pickle_format=2):
