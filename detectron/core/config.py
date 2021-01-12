@@ -236,6 +236,7 @@ __C.TEST.MAX_SIZE = 1000
 
 # Overlap threshold used for non-maximum suppression (suppress boxes with
 # IoU >= this threshold)
+#default 0.3
 __C.TEST.NMS = 0.3
 
 # Apply Fast R-CNN style bounding-box regression if True
@@ -251,7 +252,8 @@ __C.TEST.GENERATE_PROPOSALS_ON_GPU = False
 __C.TEST.PROPOSAL_LIMIT = 2000
 
 # NMS threshold used on RPN proposals
-__C.TEST.RPN_NMS_THRESH = 0.7
+#default 0.7
+__C.TEST.RPN_NMS_THRESH = 0.8
 
 # Number of top scoring RPN proposals to keep before applying NMS
 # When FPN is used, this is *per FPN level* (not total)
@@ -413,7 +415,7 @@ __C.TEST.KPS_AUG.ASPECT_RATIO_H_FLIP = False
 __C.TEST.SOFT_NMS = AttrDict()
 
 # Use soft NMS instead of standard NMS if set to True
-__C.TEST.SOFT_NMS.ENABLED = False
+__C.TEST.SOFT_NMS.ENABLED = True
 # See soft NMS paper for definition of these options
 __C.TEST.SOFT_NMS.METHOD = 'linear'
 __C.TEST.SOFT_NMS.SIGMA = 0.5
@@ -425,7 +427,7 @@ __C.TEST.SOFT_NMS.SIGMA = 0.5
 __C.TEST.BBOX_VOTE = AttrDict()
 
 # Use box voting if set to True
-__C.TEST.BBOX_VOTE.ENABLED = False
+__C.TEST.BBOX_VOTE.ENABLED = True
 
 # We use TEST.NMS threshold for the NMS step. VOTE_TH overlap threshold
 # is used to select voting boxes (IoU >= VOTE_TH) for each box that survives NMS
