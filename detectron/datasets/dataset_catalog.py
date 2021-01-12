@@ -70,9 +70,9 @@ _DATASETS = {
     },
     'coco_2014_val': {
         _IM_DIR:
-            _DATA_DIR + '/coco/coco_val2014',
+            _DATA_DIR + '/test',
         _ANN_FN:
-            _DATA_DIR + '/coco/annotations/instances_val2014.json'
+            _DATA_DIR + '/test.json'
     },
     'coco_2014_minival': {
         _IM_DIR:
@@ -140,9 +140,9 @@ _DATASETS = {
     },
     'keypoints_coco_2014_minival': {
         _IM_DIR:
-            _DATA_DIR + '/coco/coco_val2014',
+            _DATA_DIR + '/test/imagesjpgoutput',
         _ANN_FN:
-            _DATA_DIR + '/coco/annotations/person_keypoints_minival2014.json'
+            _DATA_DIR + '/test/test1.json'
     },
     'keypoints_coco_2014_valminusminival': {
         _IM_DIR:
